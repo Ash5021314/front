@@ -10,8 +10,6 @@ import {
 } from './types'
 import request from '../../request'
 
-const domain = 'http://localhost:5000'
-
 export const getHomePage = () => {
   return async dispatch => {
     let data = await request.get(`/layout/homepage`, {
