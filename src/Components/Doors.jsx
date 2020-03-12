@@ -766,6 +766,7 @@ const Doors = (props) => {
                                         defaultValue={ selectedDoor.platbandDepartureFromTheBox }
                                         style={ { width: '90%' } }
                                         onChange={ onChange }
+                                        name={'platbandDepartureFromTheBox'}
                                     />
                                 </td>
                             </tr>

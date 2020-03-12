@@ -65,6 +65,7 @@ const CreateDoor = (props) => {
     }
   }, [])
   const onchange = event => {
+    console.log('hey')
     setValue({
       ...value,
       [event.target.name]: event.target.value,
