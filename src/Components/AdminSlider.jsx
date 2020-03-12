@@ -74,14 +74,14 @@ const AdminSlider = (props) => {
   }
 
   const onSlidePicker = async (e) => {
-    let img = new FormData()
-    img.append('img', e.target.files[0])
-    setNewSlide(img)
+    setNewSlide(e.target.files[0])
   }
 
   const onNewSlideAdd = async () => {
     if (newSlide) {
-      await props.addSlide(newSlide)
+      let img = new FormData()
+      img.append('img', newSlide)
+      await props.addSlide(img)
     }
   }
   const onDeleteSlide = async (id) => {

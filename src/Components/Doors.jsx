@@ -226,13 +226,13 @@ const Doors = (props) => {
     props.createDoorOtherColor(selectedDoor._id, smallImage)
     setTimeout(() => {
       window.location.reload()
-    }, 2000)
+    }, 3000)
   }
   const handleMoreImageSave = () => {
     props.createDoorMore(selectedDoor._id, moreImage)
     setTimeout(() => {
       window.location.reload()
-    }, 2000)
+    }, 3000)
   }
 
   const onDeleteItem = async (id) => {
@@ -251,7 +251,7 @@ const Doors = (props) => {
       setOpenInterior(false)
       setTimeout(() => {
         window.location.reload()
-      }, 2000)
+      }, 3000)
     }
   }
 
