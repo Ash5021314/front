@@ -48,9 +48,9 @@ const AboutAdmin = (props) => {
   useEffect(() => {
     setImg(props.layout.about_image)
   }, [ props.layout.about_image ])
-  useEffect(() => {
-    setImg(props.layout.about_image)
-  }, [ props.layout.about_image ])
+  // useEffect(() => {
+  //   setImg(props.layout.about_image)
+  // }, [ props.layout.about_image ])
   const classe = useStyle()
 
   const onChange = async (e) => {

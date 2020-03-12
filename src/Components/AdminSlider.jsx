@@ -45,6 +45,7 @@ const useStyle = makeStyles(() => ({
 }))
 
 const AdminSlider = (props) => {
+  console.log("props",props)
   const [ selectedDoor, setSelectedDoor ] = useState(null)
   const [ slider, setSlider ] = useState([])
   const [ newSlide, setNewSlide ] = useState()
@@ -115,7 +116,9 @@ const AdminSlider = (props) => {
             </Button>
           </td>
         </tr>
-        {slider.map((item, index) => {
+        {
+          !slider ? <></>:
+          slider.map((item, index) => {
           return (
             <tr key={index}>
               <td>
