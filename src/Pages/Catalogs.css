@@ -1,0 +1,8 @@
+@media screen and (max-width: 445px) {
+    .MuiPaginationItem-sizeLarge {
+        height: 20px !important;
+        padding: 0 5px !important;
+        min-width: 20px !important;
+        font-size: 10px !important;
+    }
+}

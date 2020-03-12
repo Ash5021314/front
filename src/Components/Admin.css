@@ -1,0 +1,41 @@
+.productImg {
+    height: 100px;
+    width: 70px;
+    float: left;
+    margin-right: 50px;
+}
+
+.adminContent {
+    float: left;
+    margin-right: 50px;
+}
+
+.adminList {
+    border-bottom: 1px solid;
+    padding: 20px 0 !important;
+}
+
+.adminFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ui.table:first-child {
+    margin-top: 30px !important;
+}
+
+.ui.modal .scrolling.content {
+    max-height: none !important;
+}
+
+.akeStyles-root-65 {
+    right: 20px !important;
+    top: 20px !important;
+    background: #0c5460 !important;
+}
+
+.MuiList-root {
+    position: absolute !important;
+
+}

@@ -1,0 +1,37 @@
+.flexContact {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+    .iframeclass {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    iframe {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    iframe {
+        height: 310px;
+    }
+}

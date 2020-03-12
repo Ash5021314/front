@@ -1,0 +1,15 @@
+.owl-stage {
+    display: flex !important;
+    align-items: center;
+}
+
+.alignCenter {
+    font-size: 20px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+
+

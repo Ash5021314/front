@@ -1,0 +1,76 @@
+.custom-bg {
+    color: #ffffff;
+    border: 1px solid #b07a44;
+    background-color: #b07a44;
+    border-radius: 3px;
+    font-family: Geometria;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1024px) {
+    .custom-bg {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .custom-bg {
+        font-size: 9px;
+    }
+
+    .navbar-nav a {
+        font-size: 10px;
+    }
+}
+
+.backGround {
+    background-color: #128C7E;
+}
+
+.custom-bg {
+    font-family: inherit;
+}
+
+.custom-bg:hover {
+    background-color: #e4ded2;
+    color: #806729;
+    border-color: #e4ded2;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-body p {
+    text-align: center;
+}
+
+.navbar-nav a {
+    color: white;
+    padding: 0 10px;
+    transition: 1s;
+}
+
+.navbar-nav a:hover {
+    text-decoration: none;
+    color: #a9a991;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-nav a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-nav a {
+        font-size: 20px;
+    }
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("/images/hamburger-menu.png") !important;
+}
+

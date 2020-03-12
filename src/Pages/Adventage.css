@@ -1,0 +1,60 @@
+.headTop {
+    margin-top: 56px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.flexAdventage {
+    display: flex;
+    padding: 100px 0
+}
+
+.marginAuto {
+    margin: 50px auto;
+}
+
+@media screen and (max-width: 991px) {
+    h4 {
+        font-size: 15px;
+    }
+
+    .marginAuto {
+        margin: 20px auto;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .flexAdventage {
+        padding: 10px 0;
+    }
+
+    h4 {
+        font-size: 11px;
+    }
+
+    .mb-40 {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    h4 {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    h4 {
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    .adv {
+        padding: 20px 0 !important;
+    }
+}

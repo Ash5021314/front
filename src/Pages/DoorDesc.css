@@ -1,0 +1,209 @@
+.header {
+    margin-top: 56px;
+    text-align: center;
+    padding: 40px 0
+}
+
+.frontDoor {
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.frontDoor img {
+    height: 100%;
+    width: 100%;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.doorParagraph p {
+    margin-bottom: 0;
+    word-break: break-all;
+    font-size: 13px;
+    text-align: center;
+}
+
+.leftSide {
+    margin-bottom: 15px;
+    display: flex;
+    padding: 0 20px 20px 0;
+    border-right: 2px solid #eee;
+}
+
+.rightSection {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 46%;
+}
+
+.rightSection P {
+    margin-bottom: 0;
+}
+
+.lastP {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.lastP1 {
+    font-size: 15px;
+}
+
+.littleDoors {
+    margin-top: 20px;
+    width: 95%;
+    height: 446px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    overflow-x: hidden
+}
+
+.little {
+    height: 200px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 20%;
+}
+
+.littleChose {
+    border: 10px solid #FA7F4C
+}
+
+.little img {
+    height: 100%;
+    width: 100%;
+}
+
+.price {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.item img {
+    height: 100%;
+}
+
+.descTable td {
+    font-weight: bold;
+}
+
+.moreSlide {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.fancy-box-image {
+    width: 300px !important;
+    height: 250px !important;
+    object-fit: cover !important;
+}
+
+.fancy-box-image .image-box {
+    max-width: 600px !important;
+    height: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .lastP {
+        font-size: 16px;
+    }
+
+    .lastP1 {
+        font-size: 10px;
+    }
+
+    .little {
+        height: 120px;
+        margin-left: 10px;
+    }
+
+    .frontDoor {
+        height: 215px;
+        margin-bottom: 20px;
+    }
+
+    .doorParagraph p {
+        font-size: 8px;
+    }
+
+    .item {
+        height: 160px !important;
+        width: 80px !important;
+    }
+
+    .littleDoors {
+        height: 260px;
+    }
+
+    .descTable td {
+        font-weight: bold;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .frontDoor {
+        height: 280px;
+    }
+
+    .doorParagraph p {
+        font-size: 12px;
+    }
+
+    .little {
+        height: 160px;
+        margin-left: 24px;
+    }
+
+    .littleDoors {
+        height: 350px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .lastP {
+        font-size: 20px;
+    }
+
+    td p {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .item {
+        height: 120px !important;
+        width: 60px !important;
+    }
+
+    .little {
+        height: 120px;
+        margin-left: 35px;
+    }
+
+    .littleDoors {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    p {
+        font-size: 15px;
+    }
+
+    .lastP {
+        font-size: 14px;
+    }
+}
