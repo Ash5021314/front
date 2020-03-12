@@ -16,7 +16,10 @@ const Brends = (props) => {
   }, [])
 
   useEffect(() => {
-    setBrend(props.layout.brend)
+    if (props.layout.brend){
+      setBrend(props.layout.brend)
+    }
+
   }, [ props.layout ])
   const options = {
     items: 6,
@@ -49,7 +52,7 @@ const Brends = (props) => {
       <p className='alignCenter'>Мы сотрудничаем только с проверенными брендами.</p>
       <OwlCarousel className="owl-theme" margin={70} {...options}>
         {
-          brend.map((item, index) => {
+          brend.length && brend.map((item, index) => {
             return (
               <div className="item" key={index}>
                 <img

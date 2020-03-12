@@ -45,7 +45,6 @@ const useStyle = makeStyles(() => ({
 }))
 
 const AdminSlider = (props) => {
-  console.log("props",props)
   const [ selectedDoor, setSelectedDoor ] = useState(null)
   const [ slider, setSlider ] = useState([])
   const [ newSlide, setNewSlide ] = useState()
@@ -110,6 +109,7 @@ const AdminSlider = (props) => {
           <td>
             <input type="file" name="add_img" onChange={onSlidePicker}/>
           </td>
+          <td> </td>
           <td>
             <Button variant="contained" color="primary" onClick={onNewSlideAdd}>
               Добавить

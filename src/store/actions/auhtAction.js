@@ -39,7 +39,7 @@ export const Init = () => {
         dispatch(logout())
       }
     } catch (e) {
-      console.log(e)
+      // console.log(e)
       dispatch(logout())
     }
   }

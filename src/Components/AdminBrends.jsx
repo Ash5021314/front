@@ -110,6 +110,7 @@ const AdminBrends = (props) => {
                     <td>
                         <input type="file" name="add_img" onChange={ onBrendPicker }/>
                     </td>
+                    <td> </td>
                     <td>
                         <Button variant="contained" color="primary" onClick={ onNewBrendAdd }>
                             Добавить

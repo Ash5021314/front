@@ -28,7 +28,6 @@ export const updateAboutImage = (img) => {
         'Content-Type': 'multipart/form-data',
       },
     })
-    console.log(data.data)
     if (data.data.success) {
       dispatch({ type: UPDATE_ABOUT_IMG, payload: data.data })
     }
@@ -42,7 +41,6 @@ export const updateSlider = (id, img) => {
         'Content-Type': 'multipart/form-data',
       },
     })
-    console.log(data.data)
     if (data.data.success) {
       dispatch({ type: UPDATE_SLIDER, payload: data.data })
     }
@@ -56,7 +54,6 @@ export const addSlide = (img) => {
         'Content-Type': 'multipart/form-data',
       },
     })
-    console.log(data.data)
     if (data.data.success) {
       dispatch({ type: ADD_SLIDE, payload: data.data })
     }

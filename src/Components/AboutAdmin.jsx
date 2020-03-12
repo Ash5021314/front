@@ -70,7 +70,7 @@ const AboutAdmin = (props) => {
         <thead>
         <tr className="text-light bg-dark">
           <th>Имя</th>
-          {/*<th>Обнавить</th>*/}
+          <th>Обнавить</th>
           {/*<th>Удалить</th>*/}
         </tr>
         </thead>
@@ -84,11 +84,11 @@ const AboutAdmin = (props) => {
             />
             <input type="file" name="img" onChange={onChange}/>
           </td>
-          {/*<td>*/}
-          {/*  <Button variant="contained" color="primary" onClick={sendImage}>*/}
-          {/*    Обнавить*/}
-          {/*  </Button>*/}
-          {/*</td>*/}
+          <td>
+            <Button variant="contained" color="primary" onClick={sendImage}>
+              Обнавить
+            </Button>
+          </td>
           {/*<td>*/}
           {/*  <Button variant="contained" color="secondary">*/}
           {/*    Удалить*/}
