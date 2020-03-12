@@ -16,7 +16,9 @@ const ControlledCarousel = props => {
   }, [])
 
   useEffect(() => {
-    setSlide(props.layout.slider)
+    if (props.layout.slider) {
+      setSlide(props.layout.slider)
+    }
   }, [ props.layout ])
 
   const options = {
