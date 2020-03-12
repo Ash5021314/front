@@ -114,7 +114,7 @@ const AdminBrends = (props) => {
             </Button>
           </td>
         </tr>
-        {brend.map((item, index) => {
+        {!!brend.length && brend.map((item, index) => {
           return (
             <tr key={index}>
               <td>
