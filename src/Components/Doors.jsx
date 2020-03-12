@@ -21,7 +21,7 @@ import { connect }     from 'react-redux'
 import {
     createDoor,
     updateDoor,
-    createDoorOtherColor, domain, deleteItem, createDoorMore,
+    createDoorOtherColor, deleteItem, createDoorMore,
 }                      from '../store/actions/doorsAction'
 import { Init }        from '../store/actions/auhtAction'
 import { getHomePage } from '../store/actions/layoutAction'
