@@ -7,7 +7,6 @@ import './Header.css'
 import { Link } from 'react-router-dom'
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
-
 import { connect } from 'react-redux'
 import { sendMessage } from '../store/actions/messageAction'
 
@@ -29,7 +28,6 @@ const Header = props => {
     let re = /[0-9]/
     e.preventDefault()
     if (!re.test(message.phone)) {
-
       return false
     }
     props.sendMessage(message)

@@ -61,14 +61,11 @@ const Advantage = () => {
           <Modal.Title>Бесплатный вызов замерщика</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-
           <p>Заполните все поля</p>
           <Form className='flexCenter'>
             <Form.Group controlId="formBasicEmail">
               <Form.Control type="text" placeholder="Ваше имя"/>
-
             </Form.Group>
-
             <Form.Group controlId="formBasicPassword">
               <Form.Control type="text" placeholder="Ваш телефон"/>
             </Form.Group>

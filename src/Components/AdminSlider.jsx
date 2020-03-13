@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Button from '@material-ui/core/Button'
 import Table from 'react-bootstrap/Table'
 import { makeStyles } from '@material-ui/core/styles'
-
 import { connect } from 'react-redux'
 import { updateSlider, addSlide, deleteSlide } from '../store/actions/layoutAction'
 
@@ -52,21 +51,6 @@ const AdminSlider = (props) => {
   useEffect(() => {
     setSlider(props.layout.slider)
   }, [ props.layout.slider ])
-
-  // const onLittleChange = (value, arrayName, name, index) => {
-  //   setSelectedDoor(slider)
-  //   setSelectedDoor((selectedDoor) => {
-  //     const newArray = [...selectedDoor]
-  //     // console.log(newArray)
-  //     const field = newArray[index]
-  //     field[name] = value
-
-  //     return {
-  //       ...selectedDoor,
-  //       [arrayName]: newArray,
-  //     }
-  //   })
-  // }
 
   const onUpdateSlider = async (id) => {
     await props.updateSlider(id, selectedDoor)
@@ -129,7 +113,6 @@ const AdminSlider = (props) => {
                 />
                 <input type="file" name="sliderImage"
                        onChange={(event) => {
-                         // onLittleChange(event.target.files[0], 'slideImages', 'name', index)
                          onUpdatePicker(event.target.files[0])
                        }}
                 />

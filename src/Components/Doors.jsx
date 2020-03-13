@@ -16,7 +16,6 @@ import CloseIcon                      from '@material-ui/icons/Close'
 import Table                          from 'react-bootstrap/Table'
 import Pagination                     from '@material-ui/lab/Pagination'
 import request                        from '../request'
-
 import { connect }     from 'react-redux'
 import {
     createDoor,
@@ -46,7 +45,6 @@ const useStyles = makeStyles({
         float:  'none',
         margin: '0 auto',
     },
-
     center: {
         display:        'flex',
         justifyContent: 'center',
@@ -99,7 +97,6 @@ const Doors = (props) => {
     const [ currentPage, setPage ]              = useState(1)
     const [ pageTotalCount, setPageTotalCount ] = useState(1)
     const [ doorsToShow, setDoorsToShow ]       = useState([])
-
     const classes = useStyles()
     const classe  = useStyle()
 
@@ -180,19 +177,6 @@ const Doors = (props) => {
         })
     }
 
-    // const onImagePick = e => {
-    //   setValue({
-    //     ...value,
-    //     img: e.target.files[0],
-    //   })
-    // }
-    // const onchange = event => {
-    //   setValue({
-    //     ...value,
-    //     [event.target.name]: event.target.value,
-    //   })
-    // }
-
     const handleAddSmallImage = event => {
         const name = event.target.name
         let addingValue
@@ -238,10 +222,6 @@ const Doors = (props) => {
         setOpenInterior(false)
     }
     const handleSaveAndClose = async () => {
-        // let data = new FormData()
-        // Object.keys(selectedDoor).map(key => {
-        //   data.append(key, selectedDoor[key])
-        // })
         let resp = await props.updateDoor(selectedDoor._id, selectedDoor)
         if (resp.success) {
             setOpen(false)
@@ -260,7 +240,6 @@ const Doors = (props) => {
         }
     }
     const deleteMoreImages = async (id) => {
-        // console.log('id', id)
         const response = await request.delete(`/doors/${ selectedDoor._id }/more-image/${ id }`)
         if (response.data.success) {
             setSelectedDoor((selectedDoor) => ({
@@ -330,7 +309,6 @@ const Doors = (props) => {
                                             </Card>
                                         </Grid>
                                     )
-
                             )
                         })
                         }
@@ -366,7 +344,6 @@ const Doors = (props) => {
                         </Button>
                     </Toolbar>
                 </AppBar>
-
                 { selectedDoor && (
                     <>
                         <Table striped bordered hover>
@@ -435,11 +412,6 @@ const Doors = (props) => {
                                                 src={ res.image }
                                                 className={ classe.adminBackDoor }
                                             />
-                                            {/*<input type="file" name="littleImage"*/ }
-                                            {/*       onChange={(event) => {*/ }
-                                            {/*         onLittleChange(event.target.value, 'otherColor', 'image', index)*/ }
-                                            {/*       }}*/ }
-                                            {/*/>*/ }
                                         </td>
                                         <td>
                                             <input
@@ -996,7 +968,6 @@ const Doors = (props) => {
                         </Button>
                     </Toolbar>
                 </AppBar>
-
                 { selectedDoor && (
                     <>
                         <Table striped bordered hover>
@@ -1042,7 +1013,6 @@ const Doors = (props) => {
                                 </td>
                             </tr>
                             { selectedDoor.otherColor && selectedDoor.otherColor.map((res, index) => {
-
                                 return (
                                     <tr key={ index }>
                                         <td>

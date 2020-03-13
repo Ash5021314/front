@@ -25,7 +25,6 @@ const Notification = (props) => {
 
   useEffect(() => {
     props.getMessages()
-    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {
@@ -33,14 +32,10 @@ const Notification = (props) => {
   }, [ props.messages ])
 
   const handleToggle = (id, event) => {
-    // console.log(id, [event.target])
-    // setChecked(value);
     if (event.target.checked) {
       props.markAsSeen(id)
     }
-
     event.target.checked = false
-
     props.getMessages()
   }
 

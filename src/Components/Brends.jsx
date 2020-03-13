@@ -3,7 +3,6 @@ import OwlCarousel from 'react-owl-carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
 import './Brends.css'
-// import brends from '../data'
 import { connect } from 'react-redux'
 import { getHomePage } from '../store/actions/layoutAction'
 
@@ -11,8 +10,6 @@ const Brends = (props) => {
   const [ brend, setBrend ] = useState([])
   useEffect(() => {
     props.getHomePage()
-    // setSlide(data.images.slideImages);
-    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {

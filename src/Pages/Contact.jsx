@@ -6,7 +6,6 @@ import './Contact.css'
 import Footer from '../Components/Footer'
 
 const Contact = () => {
-
   return (
     <>
       <h2 className="headTop">Наше расположение</h2>

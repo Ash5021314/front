@@ -24,7 +24,6 @@ import Notification from './Notification'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import { createDoor, getDoors } from '../store/actions/doorsAction'
 import { getHomePage } from '../store/actions/layoutAction'
-// import doors from '../doors'
 import Orders from './Orders'
 import AdminSlider from './AdminSlider'
 import AboutAdmin from './AboutAdmin'
@@ -124,25 +123,6 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-// const useStyless = makeStyles(theme => ({
-//   root: {
-//     height: 180,
-//   },
-//
-//   paper: {
-//     margin: theme.spacing(1),
-//   },
-//   svg: {
-//     width: 100,
-//     height: 100,
-//   },
-//   polygon: {
-//     fill: theme.palette.common.white,
-//     stroke: theme.palette.divider,
-//     strokeWidth: 1,
-//   },
-// }))
-
 function Dashboard(props) {
   if (!localStorage.getItem('a_a_key')) {
     window.location.href = '/Signin'
@@ -152,9 +132,7 @@ function Dashboard(props) {
   // one of doors, orders, slider
   const [ collection, setCollection ] = useState([])
   const [ activeMenu, setActiveMenu ] = useState('doors')
-
   const [ open, setOpen ] = useState(true)
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [ checked, setChecked ] = useState(false)
   const [ modalShow, setModalShow ] = useState(false)
   const classes = useStyles()
@@ -205,7 +183,6 @@ function Dashboard(props) {
   useEffect(() => {
     props.getHomePage()
     props.getDoors()
-    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {
@@ -231,10 +208,6 @@ function Dashboard(props) {
   const notificationStyle = {
     display: checked ? 'block' : 'none',
   }
-  //
-  // function handleCloseInsert() {
-  //   setOpen(false)
-  // }
 
   return (
     <>
@@ -354,14 +327,9 @@ function Dashboard(props) {
 
             {menus[activeMenu]}
             <Box pt={4}/>
-            {/*<div className={classes.center}>*/}
-            {/*  <Pagination count={10} size="large"/>*/}
-            {/*</div>*/}
           </Container>
         </main>
       </div>
-
-
     </>
   )
 }

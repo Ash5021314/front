@@ -8,11 +8,9 @@ import { getMessages, deleteMessage } from '../store/actions/messageAction'
 
 const Orders = props => {
     let [ messages, setMessages ] = useState([])
-    // let [seenMessages,setSeenMessages] = useState([]);
 
     useEffect(() => {
         props.getMessages()
-        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {

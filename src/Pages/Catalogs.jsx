@@ -40,7 +40,6 @@ const Catalogs = props => {
     if (props.location.pathname === '/catalogs/iron') {
       selectedCategory.current = 'iron'
     }
-
     setDoors(props.doors.filter(item => item.category === selectedCategory.current))
   }, [ props.doors, props.location.pathname ])
 
@@ -48,7 +47,6 @@ const Catalogs = props => {
     if (!doors.length) {
       return
     }
-
     setPageTotalCount(Math.ceil(doors.length / doorsOnPage))
   }, [ doors ])
 

@@ -1,16 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React,  from 'react'
 import {HashRouter, Route, Redirect} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {Init} from '../store/actions/auhtAction'
 
 function PrivateRoute({component, auth, Init, ...rest}) {
-  let [isAuthenticated, setIsAuthenticated] = useState(false)
-  // useEffect(() => {
-  //   Init();
-  // }, []);
-  // useEffect(() => {
-  //   setIsAuthenticated(auth.token);
-  // }, [auth.token]);
+
   return (
     <Route
       {...rest}
@@ -21,9 +15,6 @@ function PrivateRoute({component, auth, Init, ...rest}) {
           <Redirect
             to={{
               pathname: '/SignIn',
-              // state: {
-              //   from: props.location
-              // }
             }}
           />
         )

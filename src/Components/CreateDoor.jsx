@@ -65,7 +65,6 @@ const CreateDoor = (props) => {
     }
   }, [])
   const onchange = event => {
-    console.log('hey')
     setValue({
       ...value,
       [event.target.name]: event.target.value,
@@ -112,7 +111,6 @@ const CreateDoor = (props) => {
                   <IconButton
                     edge="start"
                     color="inherit"
-                    // onClick={handleCloseInsert}
                     aria-label="close"
                   >
                     <CloseIcon/>
@@ -336,8 +334,6 @@ const CreateDoor = (props) => {
           </>
         )
       }
-
-
     </>
   )
 }

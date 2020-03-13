@@ -20,7 +20,6 @@ const Footer = () => {
             </Col>
             <Col xs={6} md={2}>
               <p className="footer_header"><span>Ссылки</span></p>
-
               <ListGroup variant="flush">
                 <ListGroup.Item className="padding0"><span><FontAwesomeIcon icon={faAngleRight}/></span> <span> О Компании</span></ListGroup.Item>
                 <ListGroup.Item className="padding0"><span><FontAwesomeIcon icon={faAngleRight}/></span>
@@ -35,7 +34,7 @@ const Footer = () => {
               <ListGroup>
                 <ListGroup.Item><span className="footerSpan"><FontAwesomeIcon icon={faMapMarked}/></span><span>г. Москва, Открытое шоссе, дом 9, стр. 11</span></ListGroup.Item>
                 <ListGroup.Item><span className="footerSpan"><FontAwesomeIcon icon={faPhone}/></span><span>8 (901) 55-44-000  <br/>  8 (919) 99-44-000</span></ListGroup.Item>
-                <ListGroup.Item><span className="footerSpan"><FontAwesomeIcon icon={faEnvelope}/></span><span>г. Москва, Открытое шоссе, дом 9, стр. 11</span></ListGroup.Item>
+                <ListGroup.Item><span className="footerSpan"><FontAwesomeIcon icon={faEnvelope}/></span><span>info@vandoors.ru</span></ListGroup.Item>
               </ListGroup>
             </Col>
             <Col xs={6} md={4}>
@@ -51,7 +50,6 @@ const Footer = () => {
           <hr style={{backgroundColor: '#ffffff'}}/>
           <div className="copy"><span dangerouslySetInnerHTML={{'__html': '&copy;'}}/> <span> Все права защищены</span>
           </div>
-
         </Container>
       </footer>
     </>

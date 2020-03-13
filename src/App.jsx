@@ -11,7 +11,6 @@ import Catalogs from './Pages/Catalogs'
 import Administrator from './Components/Administrator'
 import SignIn from './Components/SignIn'
 import DoorDesc from './Pages/DoorDesc'
-
 import { Provider } from 'react-redux'
 import store from './store/configureStore'
 import Orders from './Components/Orders'

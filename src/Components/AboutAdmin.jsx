@@ -71,7 +71,6 @@ const AboutAdmin = (props) => {
                 <tr className="text-light bg-dark">
                     <th>Имя</th>
                     <th>Обнавить</th>
-                    {/*<th>Удалить</th>*/ }
                 </tr>
                 </thead>
                 <tbody>
@@ -89,14 +88,7 @@ const AboutAdmin = (props) => {
                             Обнавить
                         </Button>
                     </td>
-                    {/*<td>*/ }
-                    {/*  <Button variant="contained" color="secondary">*/ }
-                    {/*    Удалить*/ }
-                    {/*  </Button>*/ }
-                    {/*</td>*/ }
                 </tr>
-
-
                 </tbody>
             </Table>
         </>

@@ -3,7 +3,6 @@ import OwlCarousel from 'react-owl-carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
 import './ControlledCarousel.css'
-
 import { connect } from 'react-redux'
 import { getHomePage } from '../store/actions/layoutAction'
 
@@ -11,8 +10,6 @@ const ControlledCarousel = props => {
   const [ slide, setSlide ] = useState([])
   useEffect(() => {
     props.getHomePage()
-    // setSlide(data.images.slideImages);
-    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {
@@ -32,7 +29,6 @@ const ControlledCarousel = props => {
     dotData: true,
     smartSpeed: 1500,
   }
-  // console.log('slide', slide)
   return (
     <div className="slide">
       <h1 className="carouselHeader">Входные и межкомнатные двери</h1>
