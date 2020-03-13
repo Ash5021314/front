@@ -68,15 +68,15 @@ const Items = (props) => {
         <h2 className="prodHeader">Межкомнатные двери</h2>
         <CardDeck>
           {!interiorDoors.length ? <h2>Loading...</h2> : (
-            <Row>
+            <Row style={{width:"100%"}}>
               {
                 interiorDoors.map((res, index) => {
                   return (<Col xs={6} md={3} key={index}>
                       <Card>
-                        <div className="flip-box">
-                          <div className="flip-box-">
+                        <div className="flipBox">
+                          <div className="someFlipInner">
 
-                            <div className="flip-box-">
+                            <div className="someFlip">
                               <Card.Img variant="top" src={res.frontImage}
                                         style={{ height: '100%' }}/>
                             </div>

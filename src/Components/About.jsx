@@ -1,21 +1,30 @@
-import React, {useState, useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import './About.css'
+import { connect } from 'react-redux'
+import { getHomePage } from '../store/actions/layoutAction'
 
-const About = () => {
-  const [about, setAbout] = useState('')
+const About = (props) => {
+  const [ about, setAbout ] = useState('')
+  useEffect(() => {
+    props.getHomePage()
+  }, [])
 
   useEffect(() => {
-    setAbout('data.images.about')
-  }, [])
+    if (props.layout.slider) {
+      setAbout(props.layout.about_image)
+    }
+  }, [ props.layout ])
   return (
     <div className="about">
       <Container>
         <Row>
           <Col md={6} sm={6}>
-            <img key={about} src={about} alt="" className="aboutImg"/>
+            <div className="aboutImg">
+              <img key={about} src={about} alt=""/>
+            </div>
           </Col>
           <Col className="flex" md={6} sm={6}>
             <h2>О нас</h2>
@@ -32,4 +41,10 @@ const About = () => {
   )
 }
 
-export default About
+const mapStateToProps = state => {
+  return {
+    layout: state.layout,
+  }
+}
+
+export default connect(mapStateToProps, { getHomePage })(About)
