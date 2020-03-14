@@ -6,7 +6,7 @@ import CardActions                    from '@material-ui/core/CardActions'
 import CardContent                    from '@material-ui/core/CardContent'
 import CardMedia                      from '@material-ui/core/CardMedia'
 import Typography                     from '@material-ui/core/Typography'
-import Grid                           from '@material-ui/core/Grid'
+import Grid                        from '@material-ui/core/Grid'
 import Dialog                         from '@material-ui/core/Dialog'
 import AppBar                         from '@material-ui/core/AppBar'
 import Toolbar                        from '@material-ui/core/Toolbar'
@@ -129,7 +129,6 @@ const Doors = (props) => {
     }
 
     const onChangeFrontImage = async event => {
-        debugger
         const data = new FormData()
         data.append('img', event.target.files[0])
         try {
