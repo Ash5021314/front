@@ -55,12 +55,12 @@ const IronDesc = ({ door, onClick, backContent, style, itemImg, info, item, opti
                 })}
               </div>
             </Col>
-            <Col md={2}/>
+            <Col md={2} xs={2}/>
             <Col xs={8} md={8}>
-              {door.moreImage.length && (
+              {!door.moreImage ? (
                 <>
                   <p className="moreSlide">Дополнительные фотографии</p>
-                  <OwlCarousel className="owl-theme" margin={70} {...options}>
+                  <OwlCarousel className={"owl-theme descOwl"}  margin={70} {...options}>
                     {
                       door.moreImage.map((res, index) => {
                         return (
@@ -72,9 +72,11 @@ const IronDesc = ({ door, onClick, backContent, style, itemImg, info, item, opti
                     }
                   </OwlCarousel>
                 </>
+              ):(
+                <></>
               )}
             </Col>
-            <Col md={2}/>
+            <Col md={2} xs={2}/>
             <Col xs={12} md={12}>
               <Table striped bordered hover className="descTable">
                 <tbody>

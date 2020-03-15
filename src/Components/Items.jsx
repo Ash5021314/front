@@ -30,7 +30,7 @@ const Items = (props) => {
         <h2 className="prodHeader"> Входные двери</h2>
         <CardDeck>
           {!ironDoors.length ? <h2>Loading...</h2> : (
-            <Row style={{ width: '110%' }}>
+            <Row className={"itemRow"} style={{ width: '110%' }}>
               {
                 ironDoors.map((res, index) => {
                   return (<Col xs={6} md={3} key={index}>

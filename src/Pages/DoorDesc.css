@@ -198,6 +198,9 @@
     .littleDoors {
         height: 400px;
     }
+    .descOwl .owl-item {
+        margin-right: 57px !important;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -208,4 +211,5 @@
     .lastP {
         font-size: 14px;
     }
+
 }

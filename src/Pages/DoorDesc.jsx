@@ -41,6 +41,18 @@ const DoorDesc = (props) => {
     slideBy: 1,
     dots: false,
     smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      300: {
+        items: 2,
+      },
+
+      600: {
+        items: 2,
+      }
+    },
   }
   const back = {
     background: '#EDEDED',

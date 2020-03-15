@@ -39,6 +39,6 @@
 
 @media screen and (max-width: 576px) {
     .image {
-        margin-left: 0 !important;
+        margin-left: 10px !important;
     }
 }
