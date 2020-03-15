@@ -69,7 +69,7 @@ const Catalogs = props => {
           {!doorsToShow.length ? (
             <h2>Loading...</h2>
           ) : (
-            <Row style={{ width: '100%' }}>
+            <Row style={{ width: '107%' }}>
               {doorsToShow.reverse().map((res, index) => {
                 if ('interior' === res.category) {
                   return <Interior key={index} res={res}/>
