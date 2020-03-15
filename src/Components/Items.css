@@ -79,6 +79,7 @@
     .alignCenter, .h5 {
         font-size: 11px !important;
     }
+
 }
 
 
@@ -87,7 +88,9 @@
         height: 360px;
         margin-bottom: 50px !important;
     }
-
+    .flip-box, .flipBox {
+        height: 270px;
+    }
 
 }
 
@@ -100,6 +103,10 @@
     .alignCenter, .h5 {
         font-size: 14px !important;
     }
+    .flip-box, .flipBox {
+        height: 420px;
+    }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -111,13 +118,18 @@
         display: flex;
         flex-direction: column;
     }
-
+    .row{
+        width: 100% !important;
+    }
 
 }
 
 @media screen and (max-width: 425px) {
     .card {
         height: 400px;
+    }
+    .flip-box, .flipBox {
+        height: 310px;
     }
 }
 

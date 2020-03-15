@@ -306,12 +306,12 @@ const CreateDoor = (props) => {
                   <p className={classe.titleP}>Серия</p>
                   <input type="text" name="series" onChange={onchange}/>
                 </td>
+              </tr>
+              <tr>
                 <td>
                   <p className={classe.titleP}>Внутреннее наполнение</p>
                   <input type="text" name="inside" onChange={onchange}/>
                 </td>
-              </tr>
-              <tr>
                 <td>
                   <p className={classe.titleP}>Покрытие</p>
                   <input type="text" name="coating" onChange={onchange}/>

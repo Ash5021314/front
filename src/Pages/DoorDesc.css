@@ -8,7 +8,9 @@
     height: 400px;
     margin-bottom: 20px;
 }
-
+.frontDoorInterior{
+    width:200px;
+}
 .frontDoor img {
     height: 100%;
     width: 100%;
@@ -62,7 +64,7 @@
     height: 446px;
     display: flex;
     flex-wrap: wrap;
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden
 }
 

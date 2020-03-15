@@ -35,7 +35,7 @@ const ControlledCarousel = props => {
       {!slide.length ? (
         <h2>Loading...</h2>
       ) : (
-        <OwlCarousel className="owl-theme" {...options}>
+        <OwlCarousel className={"owl-theme, carousel"} {...options}>
           {slide.map(res => {
             return (
               <div className="item" key={res._id}>

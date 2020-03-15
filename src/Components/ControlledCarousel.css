@@ -17,7 +17,15 @@
     color: white;
     padding: 20px;
 }
-
+@media screen and (max-width: 991px) {
+    .carousel .owl-item{
+        width: 40% !important;
+    }
+    .carousel  .owl-item .item{
+        width: 100% !important;
+        height: 300px !important;
+    }
+}
 @media screen and (max-width: 425px) {
     h1 {
         font-size: 15px;

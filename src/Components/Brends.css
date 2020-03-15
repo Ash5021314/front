@@ -11,5 +11,10 @@
     margin-bottom: 20px;
 }
 
-
+@media screen and (max-width: 767px){
+    .brends .item {
+        height: 90px !important;
+        width: 100px !important;
+    }
+}
 

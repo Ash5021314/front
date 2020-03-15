@@ -26,7 +26,7 @@ const About = (props) => {
               <img key={about} src={about} alt=""/>
             </div>
           </Col>
-          <Col className="flex" md={6} sm={6}>
+          <Col className={"flex,about"} md={6} sm={6}>
             <h2>О нас</h2>
             <p>VANDOORS - дистрибьютор по продаже входных и межкомнатных дверей.</p>
             <div className="line"/>

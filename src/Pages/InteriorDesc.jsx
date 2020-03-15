@@ -18,7 +18,7 @@ const InteriorDesc = ({ door, onClick, backContent, info, slide, style, itemImg,
             <Col xs={12} md={6}>
               <div className="leftSide">
                 <div className="image">
-                  <div className="frontDoor">
+                  <div className={"frontDoor frontDoorInterior"}>
                     <img src={info.image} alt=""/>
                   </div>
                   <div className="doorParagraph">
@@ -53,15 +53,16 @@ const InteriorDesc = ({ door, onClick, backContent, info, slide, style, itemImg,
                 }
               </div>
             </Col>
-            <Col xs={12} md={12}>
-              {slide && slide.length && (
+            <Col md={2}/>
+            <Col xs={8} md={8}>
+              {door.moreImage.length && (
                 <>
                   <p className="moreSlide">Дополнительные фотографии</p>
                   <OwlCarousel className="owl-theme" margin={70} {...options}>
                     {
-                      slide.map((res, index) => {
+                      door.moreImage.map((res, index) => {
                         return (
-                          <div className="item" style={item} key={index}>
+                          <div style={item} className="item" key={index}>
                             <img alt="" src={res.image} style={{ itemImg }}/>
                           </div>
                         )
@@ -71,6 +72,7 @@ const InteriorDesc = ({ door, onClick, backContent, info, slide, style, itemImg,
                 </>
               )}
             </Col>
+            <Col md={2}/>
             <Col xs={12} md={12}>
               <Table striped bordered hover className="descTable">
                 <tbody>

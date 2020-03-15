@@ -29,12 +29,18 @@
         padding: 10px 0;
     }
 
-    h4 {
-        font-size: 11px;
+    .adv h4 {
+        font-size: 17px;
     }
 
     .mb-40 {
         margin-bottom: 40px;
+    }
+    .adv p {
+        font-size: 14px;
+    }
+    .adv {
+        padding:33px !important
     }
 }
 
@@ -49,12 +55,15 @@
     h4 {
         font-size: 15px;
     }
-
-    p {
-        font-size: 10px;
-    }
-
     .adv {
         padding: 20px 0 !important;
+    }
+}
+@media screen and (max-width: 320px) {
+    .adv h4 {
+        font-size: 11px;
+    }
+    .adv p {
+        font-size: 7px;
     }
 }
