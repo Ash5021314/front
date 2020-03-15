@@ -12,6 +12,7 @@ import { sendMessage } from '../store/actions/messageAction'
 
 const Header = props => {
   const [ show, setShow ] = useState(false)
+  const [expanded, setExpanded] = useState(false);
   const [ message, setMessage ] = useState({ name: '', phone: '' })
 
   const handleClose = () => setShow(false)
@@ -33,7 +34,9 @@ const Header = props => {
     props.sendMessage(message)
     handleClose()
   }
-
+  // const toggleCol = ()=>{
+  //   setOpen(false)
+  // }
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -75,16 +78,17 @@ const Header = props => {
         expand="md"
         className="backGround top"
         variant="dark"
+        expanded={expanded}
       >
         <Container>
           <Navbar.Brand href="/">VANDOORS</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-          <Navbar.Collapse id="responsive-navbar-nav">
+          <Navbar.Toggle aria-controls="responsive-navbar-nav"  onClick={() => setExpanded(expanded ? false : "expanded")}/>
+          <Navbar.Collapse id="responsive-navbar-nav" expanded={expanded}>
             <Nav className="mr-auto ml-auto">
-              <Link to="/">Главная</Link>
-              <Link to="/advantage">Наши преимущества</Link>
-              <Link to="/catalog">Каталог</Link>
-              <Link to="/contact">Расположение</Link>
+              <Link to="/" onClick={() => setExpanded(false)}>Главная</Link>
+              <Link to="/advantage" onClick={() => setExpanded(false)}>Наши преимущества</Link>
+              <Link to="/catalog"onClick={() => setExpanded(false)} >Каталог</Link>
+              <Link to="/contact"onClick={() => setExpanded(false)}>Расположение</Link>
             </Nav>
             <Button className="custom-bg" onClick={handleShow}>
               Вызвать замерщика
