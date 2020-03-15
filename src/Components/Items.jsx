@@ -60,7 +60,7 @@ const Items = (props) => {
               }
             </Row>
           )}
-          <Button variant="info" className="buttonCenter"><Link to="catalogs/iron2"
+          <Button variant="info" className="buttonCenter"><Link to="catalogs/iron"
                                                                 style={{ color: 'white', textDecoration: 'none' }}>увидеть
             больше</Link></Button>
         </CardDeck>
@@ -94,7 +94,7 @@ const Items = (props) => {
               }
             </Row>
           )}
-          <Button variant="info" className="buttonCenter"><Link to="catalogs/iron"
+          <Button variant="info" className="buttonCenter"><Link to="catalogs/iron2"
                                                                 style={{ color: 'white', textDecoration: 'none' }}>увидеть
             больше</Link></Button>
         </CardDeck>
