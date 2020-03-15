@@ -255,7 +255,7 @@ const Doors = (props) => {
             ) : (
                 <>
                     <Grid container spacing={ 5 }>
-                        { doorsToShow.map((res, index) => {
+                        { doorsToShow.reverse().map((res, index) => {
                             return (
                                 'interior' === res.category ?
                                     (
