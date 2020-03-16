@@ -65,12 +65,6 @@ export const createDoorOtherColor = (doorId, data) => {
     }
   }
 
-// return async dispatch => {
-//   let response = await sendDoorData(img)
-//   if (response.success) {
-//     return {success: true}
-//   }
-// }
 }
 export const createDoorMore = (doorId, data) => {
   return async dispatch => {
@@ -88,13 +82,6 @@ export const createDoorMore = (doorId, data) => {
       dispatch({ type: UPDATE_DOOR, payload: response.data })
     }
   }
-
-// return async dispatch => {
-//   let response = await sendDoorData(img)
-//   if (response.success) {
-//     return {success: true}
-//   }
-// }
 }
 
 export const deleteItem = (id) => {
@@ -128,41 +115,15 @@ const sendDoorDataToUpdate = async (doorId, data) => {
   return response.data
 }
 
-export const getInteriorDoors = (skip = 0, limit = 12) => {
-  return async dispatch => {
-    let response = await request.get(`/doors?type=interior&skip=${skip}&limit=${limit}`, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    })
-    if (response.data.success) {
-      dispatch({ type: GET_INTERIOR, payload: response.data })
-    }
-  }
-}
-
-export const getIronDoors = (skip = 0, limit = 12) => {
-  return async dispatch => {
-    let response = await request.get(`/doors?type=iron&skip=${skip}&limit=${limit}`, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    })
-    if (response.data.success) {
-      dispatch({ type: GET_IRON, payload: response.data })
-    }
-  }
-}
-
 export const getDoors = () => {
   return async dispatch => {
     let response = await request.get(`/doors`, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
-    })
+    });
     if (response.data.success) {
-      dispatch({ type: GET_ALL, payload: response.data })
+      dispatch({ type: GET_ALL, payload: response.data})
     }
   }
 }

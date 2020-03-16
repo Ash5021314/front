@@ -55,7 +55,8 @@ const InteriorDesc = ({ door, onClick, backContent, info, slide, style, itemImg,
             </Col>
             <Col md={2} xs={2}/>
             <Col  md={8} xs={8}>
-              {!door.moreImage ?  (
+              {console.log("door.moreImage",door.moreImage)}
+              {door.moreImage.length && (
                 <>
                   <p className="moreSlide">Дополнительные фотографии</p>
                   <OwlCarousel className={"owl-theme descOwl"} margin={70} {...options}>
@@ -70,8 +71,6 @@ const InteriorDesc = ({ door, onClick, backContent, info, slide, style, itemImg,
                     }
                   </OwlCarousel>
                 </>
-              ):(
-                <></>
               )}
             </Col>
             <Col md={2} xs={2}/>

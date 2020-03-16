@@ -50,7 +50,7 @@ const DoorDesc = (props) => {
       },
 
       600: {
-        items: 2,
+        items: 3,
       }
     },
   }

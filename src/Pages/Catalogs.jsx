@@ -59,6 +59,7 @@ const Catalogs = props => {
     if (page !== currentPage) {
       setPage(page)
     }
+    window.scrollTo(0, 0)
   }
 
   return (
@@ -66,11 +67,11 @@ const Catalogs = props => {
       <Container>
         <h2 className="headTop">Каталог</h2>
         <CardDeck>
-          {!doorsToShow.length ? (
+          {!doors.length ? (
             <h2>Loading...</h2>
           ) : (
             <Row style={{ width: '107%' }}>
-              {doorsToShow.reverse().map((res, index) => {
+              {doorsToShow.map((res, index) => {
                 if ('interior' === res.category) {
                   return <Interior key={index} res={res}/>
                 }

@@ -57,7 +57,7 @@ const IronDesc = ({ door, onClick, backContent, style, itemImg, info, item, opti
             </Col>
             <Col md={2} xs={2}/>
             <Col xs={8} md={8}>
-              {!door.moreImage ? (
+              {door.moreImage.length && (
                 <>
                   <p className="moreSlide">Дополнительные фотографии</p>
                   <OwlCarousel className={"owl-theme descOwl"}  margin={70} {...options}>
@@ -72,8 +72,6 @@ const IronDesc = ({ door, onClick, backContent, style, itemImg, info, item, opti
                     }
                   </OwlCarousel>
                 </>
-              ):(
-                <></>
               )}
             </Col>
             <Col md={2} xs={2}/>
