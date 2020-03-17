@@ -1,3 +1,9 @@
+.MuiFormControl-root{
+    margin-bottom: 50px !important;
+}
+.MuiSelect-outlined.MuiSelect-outlined{
+    width: 150px !important;
+}
 @media screen and (max-width: 445px) {
     .MuiPaginationItem-sizeLarge {
         height: 20px !important;

@@ -55,7 +55,6 @@ const InteriorDesc = ({ door, onClick, backContent, info, slide, style, itemImg,
             </Col>
             <Col md={2} xs={2}/>
             <Col  md={8} xs={8}>
-              {console.log("door.moreImage",door.moreImage)}
               {door.moreImage.length && (
                 <>
                   <p className="moreSlide">Дополнительные фотографии</p>

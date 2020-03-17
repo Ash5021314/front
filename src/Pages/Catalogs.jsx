@@ -10,6 +10,10 @@ import Iron from './Iron'
 import './Catalogs.css'
 import { connect } from 'react-redux'
 import { getDoors } from '../store/actions/doorsAction'
+import FormControl from '@material-ui/core/FormControl'
+import InputLabel from '@material-ui/core/InputLabel'
+import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -21,15 +25,32 @@ const useStyles = makeStyles(theme => ({
     margin: '20px 0',
   },
 }))
+
+
+const useStyle = makeStyles(theme => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
 const Catalogs = props => {
   const doorsOnPage = 12
   const [ doors, setDoors ] = useState([])
   const classes = useStyles()
+  const classe = useStyle();
   let selectedCategory = useRef('interior')
   const [ currentPage, setPage ] = useState(1)
   const [ pageTotalCount, setPageTotalCount ] = useState(1)
   const [ doorsToShow, setDoorsToShow ] = useState([])
+  const [age, setAge] = React.useState('');
+  const inputLabel = useRef(null);
 
+  const handleChange = event => {
+    setAge(event.target.value);
+  };
   useEffect(() => {
     if (!doors.length) {
       props.getDoors()
@@ -39,9 +60,29 @@ const Catalogs = props => {
   useEffect(() => {
     if (props.location.pathname === '/catalogs/iron') {
       selectedCategory.current = 'iron'
+      let a =props.doors.filter(item =>{return item.category === selectedCategory.current})
+      let x =  a.sort((door1,door2)=>door2.price-door1.price)
+      if(age == "10"){
+        let x =  a.sort((door1,door2)=>door2.price-door1.price)
+        setDoors(x);
+      }else if(age == "20"){
+        let x =  a.sort((door1,door2)=>door1.price-door2.price)
+        setDoors(x);
+      }
+      setDoors(x);
+return
     }
-    setDoors(props.doors.filter(item => item.category === selectedCategory.current))
-  }, [ props.doors, props.location.pathname ])
+    let a =props.doors.filter(item =>{return item.category === selectedCategory.current})
+    let x =  a.sort((door1,door2)=>door2.priceFront-door1.priceFront)
+    if(age == "10"){
+      let x =  a.sort((door1,door2)=>door2.priceFront-door1.priceFront)
+    setDoors(x);
+    }else if(age == "20"){
+      let x =  a.sort((door1,door2)=>door1.priceFront-door2.priceFront)
+    setDoors(x);
+    }
+    setDoors(x);
+  }, [ props.doors, props.location.pathname,age ])
 
   useEffect(() => {
     if (!doors.length) {
@@ -66,6 +107,20 @@ const Catalogs = props => {
     <>
       <Container>
         <h2 className="headTop">Каталог</h2>
+        <FormControl variant="outlined" className={classe.formControl}>
+          <InputLabel ref={inputLabel} id="demo-simple-select-outlined-label">
+            Сортировка по цене
+          </InputLabel>
+          <Select
+            labelId="demo-simple-select-outlined-label"
+            id="demo-simple-select-outlined"
+            value={age}
+            onChange={handleChange}
+          >
+            <MenuItem value={10}>Дорогие - Дешевые</MenuItem>
+            <MenuItem value={20}>Дешевые - Дорогие</MenuItem>
+          </Select>
+        </FormControl>
         <CardDeck>
           {!doors.length ? (
             <h2>Loading...</h2>

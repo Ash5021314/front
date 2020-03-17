@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { makeStyles }                 from '@material-ui/core/styles'
 import Card                           from '@material-ui/core/Card'
 import CardActionArea                 from '@material-ui/core/CardActionArea'
@@ -24,6 +24,10 @@ import {
 }                      from '../store/actions/doorsAction'
 import { Init }        from '../store/actions/auhtAction'
 import { getHomePage } from '../store/actions/layoutAction'
+import InputLabel from '@material-ui/core/InputLabel'
+import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
+import FormControl from '@material-ui/core/FormControl'
 
 const useStyles = makeStyles({
     root:              {
@@ -85,8 +89,18 @@ const useStyle  = makeStyles(() => ({
         justifyContent: 'flex-End',
     },
 }))
-
+const useStyless = makeStyles(theme => ({
+    formControl: {
+        margin: theme.spacing(1),
+        minWidth: 120,
+    },
+    selectEmpty: {
+        marginTop: theme.spacing(2),
+    },
+}));
 const Doors = (props) => {
+
+    const classess = useStyless();
     const doorsOnPage                           = 12
     const { selectedDoors }                     = props
     const [ open, setOpen ]                     = useState(false)
@@ -94,31 +108,86 @@ const Doors = (props) => {
     const [ smallImage, setSmallImage ]         = useState({})
     const [ moreImage, setMoreImage ]           = useState({})
     const [ selectedDoor, setSelectedDoor ]     = useState(null)
+    const [ doors, setDoors ]     = useState([])
     const [ currentPage, setPage ]              = useState(1)
     const [ pageTotalCount, setPageTotalCount ] = useState(1)
     const [ doorsToShow, setDoorsToShow ]       = useState([])
+    const inputLabel = useRef(null);
+    const [age, setAge] = React.useState('');
     const classes = useStyles()
     const classe  = useStyle()
 
+
+
+    const handleChange = event => {
+        setAge(event.target.value);
+    };
+
     useEffect(() => {
-        if (! selectedDoors.length) {
+        if (!selectedDoors.length) {
             return
         }
 
-        setPageTotalCount(Math.ceil(selectedDoors.length / doorsOnPage))
-    }, [ selectedDoors ])
+        let a =selectedDoors.filter(item =>{return item.category === "iron"})
+
+        let b =selectedDoors.filter(item =>{return item.category === "interior"})
+        console.log("a",a)
+        let y = b.map(item=>{
+            return item.category
+        })
+
+        if(a){
+        let x =  a.sort((door1,door2)=>door2.price-door1.price);
+        if(age == "10"){
+            let x =  a.sort((door1,door2)=>door2.price-door1.price)
+            setDoors(x);
+        }else if(age == "20"){
+            let x =  a.sort((door1,door2)=>door1.price-door2.price)
+            setDoors(x);
+        }
+            setDoors(x);
+        }
+
+        if (y[0] === "interior"){
+            let x =  b.sort((door1,door2)=>door2.priceFront-door1.priceFront);
+            if(age == "10"){
+                let x =  b.sort((door1,door2)=>door2.priceFront-door1.priceFront)
+                setDoors(x);
+            }else if(age == "20"){
+                let x =  b.sort((door1,door2)=>door1.priceFront-door2.priceFront)
+                setDoors(x);
+            }
+            setDoors(x);
+        }
+
+
+
+
+
+
+
+
+    },[ selectedDoors,age])
+
 
     useEffect(() => {
+        if (!doors.length) {
+            return
+        }
+        setPageTotalCount(Math.ceil(doors.length / doorsOnPage))
+    }, [doors])
+
+    useEffect(() => {
+
         const page = (currentPage - 1) * doorsOnPage
-        setDoorsToShow(selectedDoors.slice(page, page + doorsOnPage))
-    }, [ currentPage, selectedDoors ])
+        setDoorsToShow(doors.slice(page, page + doorsOnPage))
+    }, [ currentPage, doors ])
 
     const onPageChange = (event, page) => {
         if (page !== currentPage) {
             setPage(page)
         }
     }
-
     const handleClickOpen         = (door) => {
         setSelectedDoor(door)
         setOpen(true)
@@ -127,7 +196,6 @@ const Doors = (props) => {
         setSelectedDoor(door)
         setOpenInterior(true)
     }
-
     const onChangeFrontImage = async event => {
         const data = new FormData()
         data.append('img', event.target.files[0])
@@ -145,7 +213,6 @@ const Doors = (props) => {
         } catch {
         }
     }
-
     const onChange = event => {
         event.persist()
         const name = event.target.name
@@ -162,7 +229,6 @@ const Doors = (props) => {
             [name]: addingValue,
         }))
     }
-
     const onLittleChange = (value, arrayName, name, index) => {
         setSelectedDoor((selectedDoor) => {
             const newArray = [ ...selectedDoor[arrayName] ]
@@ -175,7 +241,6 @@ const Doors = (props) => {
             }
         })
     }
-
     const handleAddSmallImage = event => {
         const name = event.target.name
         let addingValue
@@ -204,7 +269,6 @@ const Doors = (props) => {
             [name]: addingValue,
         })
     }
-
     const handleSmallImageSave = async () => {
         await props.createDoorOtherColor(selectedDoor._id, smallImage)
         window.location.reload()
@@ -214,7 +278,6 @@ const Doors = (props) => {
         await props.createDoorMore(selectedDoor._id, moreImage)
         window.location.reload()
     }
-
     const onDeleteItem       = async (id) => {
         await props.deleteItem(id)
         setOpen(false)
@@ -228,7 +291,6 @@ const Doors = (props) => {
             window.location.reload()
         }
     }
-
     const deleteOtherColor = async (id) => {
         const response = await request.delete(`/doors/${ selectedDoor._id }/other-color/${ id }`)
         if (response.data.success) {
@@ -254,8 +316,22 @@ const Doors = (props) => {
                 <h2>Loading...</h2>
             ) : (
                 <>
+                    <FormControl variant="outlined" className={classess.formControl}>
+                        <InputLabel ref={inputLabel} id="demo-simple-select-outlined-label">
+                            Сортировка по цене
+                        </InputLabel>
+                        <Select
+                          labelId="demo-simple-select-outlined-label"
+                          id="demo-simple-select-outlined"
+                          value={age}
+                          onChange={handleChange}
+                        >
+                            <MenuItem value={10}>Дорогие - Дешевые</MenuItem>
+                            <MenuItem value={20}>Дешевые - Дорогие</MenuItem>
+                        </Select>
+                    </FormControl>
                     <Grid container spacing={ 5 }>
-                        { doorsToShow.reverse().map((res, index) => {
+                        { doorsToShow.map((res, index) => {
                             return (
                                 'interior' === res.category ?
                                     (

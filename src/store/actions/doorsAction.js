@@ -1,4 +1,4 @@
-import { GET_INTERIOR, GET_IRON, GET_ALL, UPDATE_DOOR, DELETE_DOOR } from './types'
+import { GET_ALL, UPDATE_DOOR, DELETE_DOOR } from './types'
 import request from '../../request'
 
 export const createDoor = data => {

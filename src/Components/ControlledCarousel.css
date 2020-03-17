@@ -35,3 +35,9 @@
         width: 100% !important;
     }
 }
+
+@media screen and (max-width: 320px){
+    .carousel .owl-item .item {
+        height: 250px !important;
+    }
+}

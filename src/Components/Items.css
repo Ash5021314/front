@@ -79,7 +79,10 @@
     .alignCenter, .h5 {
         font-size: 11px !important;
     }
-
+    .flip-box, .flipBox {
+        background-color: transparent;
+        height: 230px;
+    }
 }
 
 
@@ -121,7 +124,9 @@
     .itemRow{
         width: 107% !important;
     }
-
+    .flip-box, .flipBox {
+        height: 390px;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -129,12 +134,25 @@
         height: 400px;
     }
     .flip-box, .flipBox {
-        height: 310px;
+        height: 300px;
+    }
+    .alignCenter, .h5 {
+        font-size: 12px !important;
     }
 }
 
+@media screen and (max-width: 375px) {
+    .alignCenter, .h5 {
+        font-size: 9px !important;
+    }
+}
 @media screen and (max-width: 330px) {
     .card {
         height: 300px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .flip-box, .flipBox {
+        height: 207px;
     }
 }
