@@ -9,6 +9,7 @@ import { getDoors } from '../store/actions/doorsAction'
 import InteriorDesc from './InteriorDesc'
 
 const DoorDesc = (props) => {
+  window.scrollTo(0, 0)
   const [ selectedDoor, setSelectedDoor ] = useState()
   const [ style, setStyle ] = useState({
     active: 0,

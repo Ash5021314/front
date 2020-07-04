@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Iron from './images/catalog/iron.png'
@@ -9,6 +9,8 @@ import './Catalog.css'
 import Footer from '../Components/Footer'
 
 const Catalog = () => {
+  window.scrollTo(0, 0)
+
   return (
     <>
       <Container>

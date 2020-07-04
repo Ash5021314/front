@@ -4,6 +4,8 @@ import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 
 const Iron = ({ res }) => {
+  window.scrollTo(0, 0)
+
   return (
     <Col
       xs={6}

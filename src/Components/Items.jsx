@@ -19,9 +19,14 @@ const Items = (props) => {
   }, [])
 
   useEffect(() => {
-    props.doors.reverse()
-    setIronDoors(props.doors.filter(({ category }) => category === 'iron').slice(0, 4))
-    setInteriorDoors(props.doors.filter(({ category }) => category === 'interior').slice(0, 4))
+    const ironDoors = props.doors.filter(({ category }) => category === 'iron')
+    ironDoors.sort((a, b) => (new Date(b.createdAt)) - (new Date(a.createdAt)))
+    setIronDoors(ironDoors.slice(0, 4))
+
+    const interiorDoors = props.doors.filter(({ category }) => category === 'interior')
+    interiorDoors.sort((a, b) => (new Date(b.createdAt)) - (new Date(a.createdAt)))
+    setInteriorDoors(interiorDoors.slice(0, 4))
+
   }, [ props.doors ])
 
   return (

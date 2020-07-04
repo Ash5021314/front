@@ -6,6 +6,8 @@ import Table from 'react-bootstrap/Table'
 import Container from 'react-bootstrap/Container'
 
 const IronDesc = ({ door, onClick, backContent, style, itemImg, info, item, options }) => {
+  window.scrollTo(0, 0)
+
   return (
     <>
       {!door ? (<h2>Loading</h2>) :

@@ -24,7 +24,7 @@
 }
 
 .backGround {
-    background-color: #128C7E;
+    background-color: #EFEFEF;
 }
 
 .custom-bg {
@@ -48,7 +48,7 @@
 }
 
 .navbar-nav a {
-    color: white;
+    color: #0D2551;
     padding: 0 10px;
     transition: 1s;
 }
@@ -57,7 +57,9 @@
     text-decoration: none;
     color: #a9a991;
 }
-
+.navbar-dark .navbar-brand {
+    color: #0D2551;
+}
 @media screen and (max-width: 768px) {
     .navbar-nav a {
         font-size: 12px;

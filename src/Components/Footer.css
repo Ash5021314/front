@@ -1,6 +1,6 @@
 .footer_header {
     font-size: 25px !important;
-    color: white;
+    color: #0D2551;
     border-bottom: 1px solid #667;
     padding-bottom: 15px;
     padding-top: 10px;
@@ -18,12 +18,12 @@
 }
 
 .footer {
-    color: #ffffff;
+    color: #0D2551;
 }
 
 .list-group-item {
     background: transparent;
-    border-color: #ffffff;
+    border-color: #0D2551;
     display: flex;
     align-items: center;
 }

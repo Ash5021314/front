@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 
 const Interior = ({ res }) => {
+  window.scrollTo(0, 0)
 
   return (
     <Col

@@ -6,6 +6,8 @@ import Table from 'react-bootstrap/Table'
 import Container from 'react-bootstrap/Container'
 
 const InteriorDesc = ({ door, onClick, backContent, info, slide, style, itemImg, item, options }) => {
+  window.scrollTo(0, 0)
+
   return (
     <>
       {!!door && (

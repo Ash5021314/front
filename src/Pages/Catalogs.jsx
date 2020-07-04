@@ -117,8 +117,8 @@ return
             value={age}
             onChange={handleChange}
           >
-            <MenuItem value={10}>Дорогие - Дешевые</MenuItem>
-            <MenuItem value={20}>Дешевые - Дорогие</MenuItem>
+            <MenuItem value={10}>цена по убыванию</MenuItem>
+            <MenuItem value={20}>цена по возрастанию</MenuItem>
           </Select>
         </FormControl>
         <CardDeck>

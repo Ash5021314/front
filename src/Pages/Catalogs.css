@@ -1,9 +1,17 @@
-.MuiFormControl-root{
+.MuiFormControl-root {
     margin-bottom: 50px !important;
+
 }
-.MuiSelect-outlined.MuiSelect-outlined{
+
+.MuiSelect-outlined.MuiSelect-outlined {
     width: 150px !important;
 }
+
+.MuiFormLabel-root {
+    padding: 0 10px !important;
+    background: white !important;
+}
+
 @media screen and (max-width: 445px) {
     .MuiPaginationItem-sizeLarge {
         height: 20px !important;
